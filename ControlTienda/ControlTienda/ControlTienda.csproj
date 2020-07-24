@@ -76,22 +76,27 @@
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\Entities\Cash.cs" />
     <Compile Include="Data\Entities\Cash_Flow.cs" />
-    <Compile Include="Data\Entities\category.cs" />
+    <Compile Include="Data\Entities\Category.cs" />
     <Compile Include="Data\Entities\Details_Purchase.cs" />
-    <Compile Include="Data\Entities\logg.cs" />
+    <Compile Include="Data\Entities\Logg.cs" />
     <Compile Include="Data\Entities\Product.cs" />
     <Compile Include="Data\Entities\Rol.cs" />
     <Compile Include="Data\Entities\Purchase.cs" />
     <Compile Include="Data\Entities\Refund.cs" />
     <Compile Include="Data\Entities\Sale.cs" />
-    <Compile Include="Data\Entities\sale_detail.cs" />
-    <Compile Include="Data\Entities\user.cs" />
+    <Compile Include="Data\Entities\Sale_detail.cs" />
+    <Compile Include="Data\Entities\User.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202007242247378_InitialDB.cs" />
+    <Compile Include="Migrations\202007242247378_InitialDB.designer.cs">
+      <DependentUpon>202007242247378_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -105,6 +110,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202007242247378_InitialDB.resx">
+      <DependentUpon>202007242247378_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

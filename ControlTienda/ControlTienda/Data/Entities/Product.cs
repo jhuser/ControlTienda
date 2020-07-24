@@ -18,5 +18,6 @@ namespace ControlTienda.Data.Entities
         public decimal Price { set; get; }
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public double Stock { set; get; }
+       
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-     public class user
+     public class User
     {
         public int ID { set; get; }
         [MaxLength(50)]

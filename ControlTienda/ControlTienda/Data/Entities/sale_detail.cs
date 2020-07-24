@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-    public class sale_detail
+    public class Sale_detail
     {
         public int ID { set; get; }
         public DateTime? Date_Hour { set; get; }
