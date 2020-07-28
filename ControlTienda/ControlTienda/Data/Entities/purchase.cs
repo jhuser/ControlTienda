@@ -18,6 +18,8 @@ namespace ControlTienda.Data.Entities
         public decimal Price { set; get; }
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public int quantity { set; get; }
+       
+        public Cash_Flow cash_Flow { set; get; }
 
     }
 }

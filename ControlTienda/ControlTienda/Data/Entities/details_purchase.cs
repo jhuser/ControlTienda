@@ -15,5 +15,8 @@ namespace ControlTienda.Data.Entities
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
         public decimal total_amount { set; get; }
 
+        public  Product Product { set; get; }
+        public Purchase Purchase { set; get; }
+
     }
 }

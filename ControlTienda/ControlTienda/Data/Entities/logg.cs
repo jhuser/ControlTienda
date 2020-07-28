@@ -14,5 +14,6 @@ namespace ControlTienda.Data.Entities
         public DateTime? Date_Hour_exit { set; get; }
         [MaxLength(250)]
         public string Remark { set; get; }
+        public User user { set; get; }
     }
 }

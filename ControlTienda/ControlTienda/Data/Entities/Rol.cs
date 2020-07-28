@@ -15,5 +15,6 @@ namespace ControlTienda.Data.Entities
         public string Name { set; get; }
         [MaxLength(250)]
         public string Details { set; get;}
+        public Rol rol { set; get; }
     }
 }

@@ -15,5 +15,6 @@ namespace ControlTienda.Data.Entities
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
         public decimal total_amount { set; get; }
         public DateTime? Date { set; get; }
+        public Cash cash { set; get; }
     } 
 }
