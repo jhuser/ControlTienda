@@ -9,7 +9,7 @@ namespace ControlTienda.Data
 {
     using ControlTienda.Data.Entities;
     using System;
-     public class LoggRepository : GenericRepository<Product>, ISaleRepository
+     public class LoggRepository : GenericRepository<Product>, ILoggRepository
     {
         public LoggRepository(DataContext context): base(context) 
         {
