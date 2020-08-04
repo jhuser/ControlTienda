@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-    public class Sale
+    public class Sale:IEntity
     {
-        public int ID { set; get; } 
+        public int Id { set; get; } 
         public DateTime? date_hour { set; get; }
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public int Quantity { set; get; }

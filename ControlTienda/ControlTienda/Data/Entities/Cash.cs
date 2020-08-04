@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-    public class Cash
+    public class Cash : IEntity
     {
-        public int ID { set; get; }
+        public int Id { set; get; }
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
         public decimal unit_amount { set; get; }
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-     public class Purchase
+     public class Purchase:IEntity
     {
-       public int ID { set; get; }
+       public int Id { set; get; }
        public  DateTime? Date_Hour { set; get; }
         [MaxLength(250)]
        public string Remark { set; get; }

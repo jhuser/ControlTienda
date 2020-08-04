@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-    public class Refund
+    public class Refund:IEntity
     {
-        public int ID { set; get; }
+        public int Id { set; get; }
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
 
         public int Amount { set; get; }

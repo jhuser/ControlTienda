@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-    public class Rol
+    public class Rol:IEntity
     {
-        public int ID { set; get; }
+        public int Id { set; get; }
         [MaxLength(25)]
         public string Name { set; get; }
         [MaxLength(250)]

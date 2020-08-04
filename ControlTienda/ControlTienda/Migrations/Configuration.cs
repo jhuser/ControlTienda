@@ -17,8 +17,20 @@
 
         protected override void Seed(DataContext context)
         {
-            context.rols.Add(new Rol() { Name = "Admin", Details="Min Admin of the System  with full permissions" });
-          
+            Rol rol = new Rol();
+            rol.Name = "Admin";
+            rol.Details = "es la categoria mas alta en la jerarquia de trabajo,tiene acceso ilimitado";
+            context.rols.Add(rol);
+            context.SaveChanges();
+
+            User user = new User();
+            user.Name = "Admin";
+            user.Nickname = "administrador";
+            user.Password = "Admin";
+            context.users.Add(user);
+            context.SaveChanges();
+            //context.rols.Add(new Rol() { Name = "Admin", Details="Min Admin of the System  with full permissions" });
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method

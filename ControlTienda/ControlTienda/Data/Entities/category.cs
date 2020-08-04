@@ -8,13 +8,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ControlTienda.Data.Entities
 {
-    public class Category
+    public class Category:IEntity
     {
-        public int ID { set; get; }
+        public int Id { set; get; }
         [MaxLength(30)]
         public string Name { set; get; }
         [MaxLength(250)]
-        public string Remark { set; get; }
+        public string Description { set; get; }
        
        
     }

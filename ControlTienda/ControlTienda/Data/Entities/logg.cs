@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-    public class Logg
+    public class Product : IEntity
     {
-        public int ID { set; get; }
+        public int Id { set; get; }
         public DateTime? Date_Hour_entry { set; get; }
         public DateTime? Date_Hour_exit { set; get; }
         [MaxLength(250)]

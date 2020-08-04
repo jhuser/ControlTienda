@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-     public class User
+     public class User: IEntity
     {
-        public int ID { set; get; }
+        public int Id { set; get; }
         [MaxLength(50)]
         public string Name { set; get; }
        [MaxLength(100)]
@@ -21,5 +21,6 @@ namespace ControlTienda.Data.Entities
         public string Nickname { set; get; }
         [MinLength(8),MaxLength(15)]
         public string Password { set; get; }
+        public Rol rol { set; get; }
     }
 }

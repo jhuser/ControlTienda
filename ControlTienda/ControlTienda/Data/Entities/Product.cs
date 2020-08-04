@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ControlTienda.Data.Entities
 {
-    public class Product
+    public class Product:IEntity
     {
-        public int ID { set; get; }
+        public int Id { set; get; }
         [MaxLength(25)]
         public string BarCode { set; get; }
         [MaxLength(150)]
