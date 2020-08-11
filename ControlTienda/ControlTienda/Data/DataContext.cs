@@ -20,7 +20,7 @@ namespace ControlTienda.Data
         public DbSet<Category> categories { set; get; }
         public DbSet<Details_Purchase> Details_Purchases { set; get; }
         public DbSet<Sale> sales { set; get; }
-        public DbSet<Product> loggs { set; get; }
+        public DbSet<Logg> loggs { set; get; }
         public DbSet<Product> products { set; get; }
         public DbSet<Purchase> purchases { set; get; }
         public DbSet<Refund> refunds { set; get; }

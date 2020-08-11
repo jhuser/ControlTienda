@@ -11,7 +11,7 @@ namespace ControlTienda.Data.Entities
     {
         public int Id { set; get; }
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
-        public decimal unit_amount { set; get; }
+        public decimal Unit_amount { set; get; }
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
         public decimal total_amount { set; get; }
         public DateTime? Date { set; get; }

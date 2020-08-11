@@ -2,6 +2,7 @@
 {
     using ControlTienda.Data;
     using ControlTienda.Data.Entities;
+    using ControlTienda.Encrypt;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,21 +15,26 @@
         {
             AutomaticMigrationsEnabled = false;
         }
-
+       
         protected override void Seed(DataContext context)
         {
-            Rol rol = new Rol();
-            rol.Name = "Admin";
-            rol.Details = "es la categoria mas alta en la jerarquia de trabajo,tiene acceso ilimitado";
-            context.rols.Add(rol);
-            context.SaveChanges();
-
+            Encrypting encrypting = new Encrypting();
+            Rol rol = new Rol();         
             User user = new User();
-            user.Name = "Admin";
-            user.Nickname = "administrador";
-            user.Password = "Admin";
-            context.users.Add(user);
-            context.SaveChanges();
+            if(context.rols ==null && context.users == null)
+            {
+                rol.Name = "Admin";
+                rol.Details = "es la categoria mas alta en la jerarquia de trabajo,tiene acceso ilimitado";
+                context.rols.Add(rol);
+                
+                user.Name = "Admin";
+                user.Nickname = "administrador";
+                user.Password = "Admin";
+                context.users.Add(user);
+                context.SaveChanges();
+            }
+
+           
             //context.rols.Add(new Rol() { Name = "Admin", Details="Min Admin of the System  with full permissions" });
 
             //  This method will be called after migrating to the latest version.

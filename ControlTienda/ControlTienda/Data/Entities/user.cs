@@ -17,10 +17,10 @@ namespace ControlTienda.Data.Entities
         public string Address { set; get; }
         [MaxLength(25)]
         public string Phone { set; get; }
-        [MinLength(6, ErrorMessage = "At less you need 6 characters."),MaxLength(8, ErrorMessage = "At less you need 8 characters.")]
+        [ConcurrencyCheck,MinLength(6, ErrorMessage = "At less you need 6 characters."),MaxLength(200, ErrorMessage = "At less you need 8 characters.")]
         public string Nickname { set; get; }
-        [MinLength(8),MaxLength(15)]
+        [MinLength(8),MaxLength(200)]
         public string Password { set; get; }
-        public Rol rol { set; get; }
+        public Rol Rol { set; get; }
     }
 }
