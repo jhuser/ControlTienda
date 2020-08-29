@@ -6,6 +6,7 @@ namespace ControlTienda
     using ControlTienda.Data;
     using ControlTienda.Data.Entities;
     using ControlTienda.Encrypt;
+    using ControlTienda.FrondEnd;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -36,21 +37,34 @@ namespace ControlTienda
         {
            
             DataContext context = new DataContext();
-            GenericRepository<User> generic = new GenericRepository<User>(context);
+            UserRepository generic = new UserRepository(context);
+            LoggRepository loggRepository = new LoggRepository(context);
+            Logg logg = new Logg();
             Encrypting en = new Encrypting();
-            string nick = tbUserName.Text;         
-            var user = (from u in context.users where u.Nickname == nick select u).FirstOrDefault();
+            
+            string nick = tbUserName.Text;
+            DateTime login;
+              var user = generic.user(nick);
             if (!(user == null))
             {
                 if (!generic.Exist(user.Id))
-                    MessageBox.Show("user does not exist.. ", "WARNING");
+                    MessageBox.Show("user does not exist.. ", "WARNING!!!");
                 else
                 {
 
                     string pass = tbPassword.Password;
                     if (en.GetSha256(pass) == user.Password)
                     {
-                        MessageBox.Show("Logueado.. "+user.Name);
+                        //MessageBox.Show("Logueado.. "+user.Name);
+                        ParentWindow window = new ParentWindow();
+                        MessageBox.Show("logueado... "+user.Name);
+                        login = DateTime.Now;
+                        logg.Date_Hour_entry = login;
+                        logg.UserId = user.Id;
+                        loggRepository.Create(logg);
+                        window.Show();
+                        Close();
+
                     }
                     else
                     {

@@ -23,5 +23,11 @@ namespace ControlTienda.FrondEnd
         {
             InitializeComponent();
         }
+
+        private void BtnUsers_Click(object sender, RoutedEventArgs e)
+        {
+            UserWindow window = new UserWindow();
+            window.Show();
+        }
     }
 }

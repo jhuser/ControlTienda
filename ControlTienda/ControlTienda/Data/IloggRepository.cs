@@ -2,7 +2,7 @@
 
 namespace ControlTienda.Data
 {
-    public interface ILoggRepository: IGenericRepository<Product>
+    public interface ILoggRepository: IGenericRepository<Logg>
     {
 
     }

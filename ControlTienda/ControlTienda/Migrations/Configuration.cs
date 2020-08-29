@@ -24,12 +24,13 @@
             if(context.rols ==null && context.users == null)
             {
                 rol.Name = "Admin";
-                rol.Details = "es la categoria mas alta en la jerarquia de trabajo,tiene acceso ilimitado";
+                rol.Details = "es la categoria mas alta en la jerarquia de trabajo,tiene acceso ilimitado";             
                 context.rols.Add(rol);
                 
                 user.Name = "Admin";
                 user.Nickname = "administrador";
-                user.Password = "Admin";
+                user.Password =encrypting.GetSha256("Admin");
+                
                 context.users.Add(user);
                 context.SaveChanges();
             }

@@ -75,6 +75,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FrondEnd\RolManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrondEnd\UserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -132,6 +140,12 @@
     <Compile Include="Encrypt\Encrypting.cs" />
     <Compile Include="FrondEnd\ParentWindow.xaml.cs">
       <DependentUpon>ParentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrondEnd\RolManager.xaml.cs">
+      <DependentUpon>RolManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrondEnd\UserWindow.xaml.cs">
+      <DependentUpon>UserWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202007242247378_InitialDB.cs" />
     <Compile Include="Migrations\202007242247378_InitialDB.designer.cs">
@@ -195,7 +209,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\user black.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

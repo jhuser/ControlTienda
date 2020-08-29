@@ -1,0 +1,52 @@
+﻿<Window x:Class="ControlTienda.FrondEnd.RolManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ControlTienda.FrondEnd"
+        mc:Ignorable="d"
+        Title="RolManager" Height="450" Width="500" Background="Cyan" WindowStyle="ToolWindow">
+    <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tbName"
+              materialDesign:HintAssist.Hint="Full Name" Margin="10" FontWeight="Bold"  FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.Row="0"/>
+            <TextBox x:Name="tbDetail"
+              materialDesign:HintAssist.Hint="Full Detail" Margin="10" FontWeight="Bold"  FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.Row="1"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnSave" FontWeight="Bold" FontSize="20"  Content="SAVE" Grid.Column="0"  Style="{StaticResource MaterialDesignRaisedDarkButton}"
+               Margin="15" Click="btnSave_Click"  >
+            </Button>
+            <Button x:Name="btnCancel" FontWeight="Bold" FontSize="20"  Content="CANCEL" Grid.Column="1"  Style="{StaticResource MaterialDesignFlatAccentBgButton}"
+               Margin="15" Click="btnCancel_Click"  >
+            </Button>
+            
+        </Grid>
+        <DataGrid Margin="10" x:Name="dgRol" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Full Name" Width="200" Binding="{Binding Name}" FontSize="20" FontWeight="Bold"/>
+                <DataGridTextColumn Header="Address" Width="150" Binding="{Binding Details}" FontSize="20" FontWeight="Bold"/>
+               
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button x:Name="btnDelete"  Content="DELETE" CommandParameter="{Binding Id}" Click="btnDelete_Click"/>
+                                <Button x:Name="btnEdit"  Content="EDIT" CommandParameter="{Binding Id}" Click="btnEdit_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</Window>

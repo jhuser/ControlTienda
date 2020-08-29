@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:ControlTienda.FrondEnd"
         mc:Ignorable="d"
-        Title="Ventana Principal" Height="450" Width="800">
+        Title="Ventana Principal" Height="450" Width="800" Background="Cyan">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -16,6 +17,12 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="BtnUsers" Margin="5" Content="Users Management"/>
+        <Button x:Name="BtnUsers" Margin="5" Height="200" Width="200" HorizontalAlignment="Center" 
+                VerticalAlignment="Center" materialDesign:ButtonAssist.CornerRadius="30" Grid.Column="0" Grid.Row="0" Click="BtnUsers_Click">
+            <StackPanel>
+                <Image Source="/images/user black.png" />
+                <Label Content="User Manager" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Foreground="White"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>

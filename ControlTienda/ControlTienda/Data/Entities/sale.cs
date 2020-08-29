@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace ControlTienda.Data.Entities
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
         public decimal Amount { set; get; }
         public Cash_Flow cash_Flow { set; get; }
+        public int CashFlowId { set; get; }
         public User user { set; get; }
+        public int UserId { set; get; }
     }
 }

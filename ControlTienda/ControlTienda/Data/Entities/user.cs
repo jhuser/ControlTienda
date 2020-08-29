@@ -21,6 +21,7 @@ namespace ControlTienda.Data.Entities
         public string Nickname { set; get; }
         [MinLength(8),MaxLength(200)]
         public string Password { set; get; }
+        public int RolId { set; get; }
         public Rol Rol { set; get; }
     }
 }

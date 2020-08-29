@@ -16,7 +16,9 @@ namespace ControlTienda.Data.Entities
         public decimal total_amount { set; get; }
 
         public  Product Product { set; get; }
+        public int ProductId { set; get; }
         public Purchase Purchase { set; get; }
+        public int PurchaseId { set; get; }
 
     }
 }

@@ -18,5 +18,6 @@ namespace ControlTienda.Data.Entities
         public string observations { set; get; }
 
         public Sale_detail Sale_Detail { set; get; }
+        public int SaleDetailId { set; get; }
     }
 }

@@ -6,16 +6,14 @@
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:ControlTienda"  
     mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="350">
+        Title="MainWindow" Height="450" Width="350" Background="Cyan" WindowStyle="ToolWindow">
     <StackPanel>
-        <TextBox x:Name="tbUserName" Height="40" Margin="20,60,20,10" VerticalAlignment="Center"/>
-        <PasswordBox
-  x:Name="tbPassword"
-  materialDesign:HintAssist.Hint="Floating Password"
-  materialDesign:HintAssist.Foreground="Green"
-  materialDesign:TextFieldAssist.UnderlineBrush="Green"
-  Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
-        <Button x:Name="btnaceptar" Height="25" Content="Aceptar" FontWeight="Bold" Margin="55,25,55,10" VerticalAlignment="Center" Click="Btnaceptar_Click"/>
+        
+        <TextBox x:Name="tbUserName" Margin="20,65,20,10" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="User Nick" 
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" FontWeight="Bold" FontSize="15"/>
+        <PasswordBox x:Name="tbPassword" Margin="20,35,20,10" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Password" 
+                     Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" VerticalAlignment="Center" FontWeight="Bold" FontSize="15"/>
+        <Button x:Name="btnaceptar" Height="25" Content="Aceptar" FontWeight="Bold" Margin="55,25,55,10" VerticalAlignment="Center" Click="Btnaceptar_Click" IsDefault="True"/>
         <Button x:Name="btnCancelar" Height="25" Content="Cancelar" FontWeight="Bold" Margin="55,25,55,10" VerticalAlignment="Center" Click="btnCancelar_Click"/>
     </StackPanel>
 </Window>

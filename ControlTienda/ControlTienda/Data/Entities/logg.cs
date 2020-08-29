@@ -15,5 +15,6 @@ namespace ControlTienda.Data.Entities
         [MaxLength(250)]
         public string Remark { set; get; }
         public User user { set; get; }
+        public int UserId { set; get; }
     }
 }

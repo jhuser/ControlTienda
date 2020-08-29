@@ -20,6 +20,7 @@ namespace ControlTienda.Data.Entities
         public int quantity { set; get; }
        
         public Cash_Flow cash_Flow { set; get; }
+        public int CashFlowId { set; get; }
 
     }
 }
